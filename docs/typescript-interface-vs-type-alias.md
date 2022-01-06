@@ -1,0 +1,9 @@
+# TypeScript: Interface vs Type Alias
+
+[Official Handbook](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces)
+
+I prefer to use type over interface because:
+
+1. Declaration merging: if the same interface (same name) is declared twice with different properties, they will be merged into one interface with all the properties. With type alias, it will trigger a TypeScript error.
+2. Inferfaces look more attached to classes, while types to functions.
+3. It's not called InterfaceScript, isn't it?

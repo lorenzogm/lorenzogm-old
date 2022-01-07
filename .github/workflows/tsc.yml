@@ -25,6 +25,6 @@ jobs:
 
   tsc:
     needs: install
-
+    steps:
       - name: Run tsc
         run: npm run tsc

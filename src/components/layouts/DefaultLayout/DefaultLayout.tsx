@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Footer, Header } from '~/ui'
+import { Footer, Header } from '~/components'
 
 type DefaultLayoutProps = {
   children: ReactNode

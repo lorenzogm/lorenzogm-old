@@ -2,7 +2,7 @@ import createEmotionServer from '@emotion/server/create-instance'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import * as React from 'react'
 
-import { theme } from '~/ui'
+import { theme } from '~/components'
 import { createEmotionCache } from '~/utils'
 
 // eslint-disable-next-line import/no-default-export

@@ -54,5 +54,23 @@
 
     // https://www.npmjs.com/package/eslint-plugin-unused-imports
     "unused-imports/no-unused-imports": "error"
-  }
+  },
+  "overrides": [
+    {
+      // or whatever matches stories specified in .storybook/main.js
+      "files": ["src/pages/**/*"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    },
+    {
+      // or whatever matches stories specified in .storybook/main.js
+      "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+      "rules": {
+        "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+        "import/no-default-export": "off",
+        "storybook/story-exports": "off"
+      }
+    }
+  ]
 }

@@ -5,7 +5,7 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
 
-import { DefaultLayout, theme } from '~/ui'
+import { DefaultLayout, theme } from '~/components'
 import { createEmotionCache } from '~/utils'
 
 // Client-side cache, shared for the whole session of the user in the browser.

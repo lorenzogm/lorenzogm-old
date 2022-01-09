@@ -3,6 +3,7 @@
 This folder structure could be shared across disciplines to facilitate the communication in the team.
 
 It means sharing an structure between:
+
 - Documentation: Specifications owned by the business analysts in tools like confluence.
 - Design: UX and UI owned by the designers in tools like Figma.
 - Front-end: It can be applied to the folder structure in the FE code, to storybook or any other tool to document the design system and the content models required for the communication with the BE.

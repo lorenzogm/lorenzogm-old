@@ -1,6 +1,6 @@
 name: Deploy to Vercel (Production)
 on:
-  pull_request:
+  push:
     branches:
       - main
 jobs:

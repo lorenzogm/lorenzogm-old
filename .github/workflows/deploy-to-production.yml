@@ -1,5 +1,7 @@
-name: Deploy to Vercel (Preview)
-on: pull_request
+name: Deploy (Production)
+on:
+  push:
+    branches: [main]
 jobs:
   checks:
     uses: lorenzogm/lorenzogm/.github/workflows/checks.yml@main
@@ -14,3 +16,4 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}} # Required
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
+          vercel-args: '--prod' # Optional

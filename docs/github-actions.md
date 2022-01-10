@@ -1,15 +1,21 @@
 # GitHub Actions
 
-## Actions
+- Checks: [checks.yml](../.github/workflows/checks.yml)
 
-- tsc
-- eslint
-- prettier
-- test
-- build
-- deploy
+  - This is a [Reusable Workflow](https://docs.github.com/en/actions/learn-github-actions/reusing-workflows#using-outputs-from-a-reusable-workflow).
+  - It uses the cache to run faster.
+  - Linting: Typescript and ESLint
+  - Formatting: Prettier
+  - Testing: Running test
+  - Build: The build completes succesfully
 
-## Tips
+- Deploy to Preview: [deploy-to-preview.yml](../.github/workflows/deploy-to-preview.yml)
 
-- Use cache to make "npm ci" faster across checks.
-- ToDo: multiple actions vs 1 action with multiple steps
+  - It runs on pull request
+  - It depends on [checks.yml](../.github/workflows/checks.yml)
+  - Deploy the branch to a preview instance.
+
+- Deploy to Production: [deploy-to-production.yml](../.github/workflows/deploy-to-production.yml)
+  - It runs on push, only on main
+  - It depends on [checks.yml](../.github/workflows/checks.yml)
+  - Deploy the main branch to production.

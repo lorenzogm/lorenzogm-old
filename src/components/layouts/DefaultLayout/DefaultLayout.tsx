@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Footer, Header } from '~/components'
+import { Container } from '~/components'
 
 type DefaultLayoutProps = {
   children: ReactNode
@@ -8,12 +8,8 @@ type DefaultLayoutProps = {
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
-    <div>
-      <Header />
-
+    <Container>
       <main>{children}</main>
-
-      <Footer />
-    </div>
+    </Container>
   )
 }

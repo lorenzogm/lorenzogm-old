@@ -95,7 +95,7 @@ module.exports = {
 
     // Handle module aliases
     '^~/hooks$': '<rootDir>/hooks/index.ts',
-    '^~/services$': '<rootDir>/services/index.ts',
+    '^~/services/(.*)$': '<rootDir>/services/$1',
     '^~/components$': '<rootDir>/src/components/index.ts',
     '^~/utils$': '<rootDir>/utils/index.ts',
   },

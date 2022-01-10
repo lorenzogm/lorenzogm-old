@@ -1,4 +1,3 @@
-/* eslint-disable jest/expect-expect */
 import { composeStories } from '@storybook/testing-react'
 import { render, screen } from '@testing-library/react'
 

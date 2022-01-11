@@ -1,7 +1,7 @@
 ---
 title: Encapsulate Dependencies
 date: 'January 11, 2022'
-description: 
+description: Reference the library only once in your project
 imageURL: '/javascript-functions-thumbnail.jpeg'
 tags: ['reusability']
 ---
@@ -13,15 +13,15 @@ When working with dependencies, like a React component imported from a library, 
 "elements/index.ts" (No need to create a folder for the component)
 
     import ComponentFromLibrary from '@library'
-    
+
     export const Component = ComponentFromLibrary
-    
+
 ## The component is modified
 
 At "elements/Component/Component.tsx".
 
     import ComponentFromLibrary from '@library'
-    
+
     export function Component() {
       return <ComponentFromLibrary />
     }

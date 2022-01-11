@@ -1,4 +1,5 @@
 export * from './elements'
+export * from './foundation'
 export * from './layouts'
 export * from './modules'
-export * from './theme'
+export * from './templates'

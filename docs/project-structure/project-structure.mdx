@@ -1,6 +1,6 @@
 ---
 title: Project Structure
-date: 'January 10, 2022'
+date: 'January 11, 2022'
 description: This folder structure could be shared across disciplines to facilitate the communication in the team.
 imageURL: '/javascript-functions-thumbnail.jpeg'
 tags: ['project-management']
@@ -14,3 +14,11 @@ It means sharing an structure between:
 - Design: UX and UI owned by the designers in tools like Figma.
 - Front-end: It can be applied to the folder structure in the FE code, to storybook or any other tool to document the design system and the content models required for the communication with the BE.
 - Back-end: This structure should be applicable to the components required for the BE, but it's coming from UI perspective, so it needs to be better tested for the different cases.
+
+Project Structure:
+
+- 01 Foundation: The foundation of the design system are the design tokens and basic assets. These act like the available settings to be used within elements and modules.
+- 02 Elements: The base elements are the smallest building blocks which can be reused in various variations by optionally changing their modifiers. They can be used within modules, or even directly on template. For example a button, heading, or image.
+- 03 Modules: The modules are more complex UI components which are reusable to create recognizable design patterns. They are composed by elements.
+- 04 Templates: The page templates are representations of the pages build from modules and elements, but without any data fetching. It is actually the “main“ content area, so basically between header and footer.
+- 05 Layouts: The page layouts define the global page structure, think of header, main, and footer. But they could also contain a generic notification bar or cookie consent popup.

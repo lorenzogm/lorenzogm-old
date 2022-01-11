@@ -1,6 +1,6 @@
 # Hi, I'm Lorenzo
 
-Visit [lorenzogm.com](lorenzogm.com)
+Visit [lorenzogm.com](https://lorenzogm.com)
 
 I'm sharing the following content:
 

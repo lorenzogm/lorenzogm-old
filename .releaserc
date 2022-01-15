@@ -12,13 +12,7 @@
     [
       "@semantic-release/release-notes-generator",
       {
-        "preset": "conventionalcommits",
-        "presetConfig": {
-          "issuePrefixes": [
-            "D2C-"
-          ],
-          "issueUrlFormat": "https://dev.azure.com/REPLACE_WITH_ORGANIZATION_NAME/REPLACE_WITH_PROJECT_NAME/_workitems/edit/{{id}}"
-        }
+        "preset": "conventionalcommits"
       }
     ],
     "@semantic-release/changelog",

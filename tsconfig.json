@@ -17,10 +17,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "~/hooks": ["./src/hooks/index.ts"],
-      "~/services/*": ["./src/services/*"],
       "~/components": ["./src/components/index.ts"],
-      "~/utils": ["./src/utils/index.ts"]
+      "~/hooks": ["./src/hooks/index.ts"],
+      "~/types": ["./src/types/index.ts"],
+      "~/utils/client": ["src/utils/client/index.ts"],
+      "~/utils/server": ["src/utils/server/index.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

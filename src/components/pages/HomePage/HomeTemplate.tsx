@@ -1,9 +1,10 @@
 import { Heading, Link, Paragraph } from '~/components'
+import { Docs } from '~/types'
 
 import Styled from './HeroTemplate.styled'
 
 type HomePageProps = {
-  docs: Array<Doc>
+  docs: Docs
 }
 
 export function HomeTemplate({ docs }: HomePageProps) {
@@ -21,24 +22,19 @@ export function HomeTemplate({ docs }: HomePageProps) {
       <hr />
       <Heading variant="h2">Docs (WIP)</Heading>
       <Paragraph>This is the documentation I like to use for my projects:</Paragraph>
-      {docs.map((doc) => (
-        <ul key={doc.slug}>
-          <li>
-            <Link href={`https://github.com/lorenzogm/lorenzogm/blob/main/${doc.filePath}.mdx`}>{doc.title}</Link>:{' '}
-            {doc.description}
-          </li>
-        </ul>
+      {Object.values(docs).map((docCategory) => (
+        <div key={docCategory.name}>
+          <Heading variant="h3">{docCategory.name}</Heading>
+          {docCategory.entries.map((doc) => (
+            <ul key={doc.slug}>
+              <li>
+                <Link href={`https://github.com/lorenzogm/lorenzogm/blob/main/${doc.filePath}.mdx`}>{doc.title}</Link>:{' '}
+                {doc.description}
+              </li>
+            </ul>
+          ))}
+        </div>
       ))}
     </>
   )
-}
-
-export type Doc = {
-  date: string
-  description: string
-  imageURL: string
-  filePath: string
-  slug: string
-  tags: Array<string>
-  title: string
 }

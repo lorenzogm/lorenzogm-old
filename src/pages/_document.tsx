@@ -3,7 +3,7 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 import * as React from 'react'
 
 import { theme } from '~/components'
-import { createEmotionCache } from '~/utils'
+import { createEmotionCache } from '~/utils/client'
 
 // eslint-disable-next-line import/no-default-export
 export default class MyDocument extends Document {

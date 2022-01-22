@@ -1,21 +1,15 @@
 import { GetStaticProps } from 'next'
 
-import { Doc, HomeTemplate } from '~/components'
-import { getAllFiles } from '~/services/files'
+import { HomePage } from '~/components'
+import { getAllDocs } from '~/utils/server'
 
 // eslint-disable-next-line func-style
 export const getStaticProps: GetStaticProps = () => {
-  const docs: Array<Doc> = getAllFiles({ folderPath: 'docs' })
+  const docs = getAllDocs()
 
   return {
     props: { docs },
   }
 }
 
-type HomePageProps = {
-  docs: Array<Doc>
-}
-
-export default function HomePage({ docs }: HomePageProps) {
-  return <HomeTemplate docs={docs} />
-}
+export default HomePage

@@ -6,7 +6,7 @@ imageURL: '/javascript-functions-thumbnail.jpeg'
 tags: ['code-quality', 'dev-ops']
 ---
 
-- Checks: [checks.yml](../.github/workflows/checks.yml)
+- Checks: [checks.yml](../../.github/workflows/checks.yml)
 
   - This is a [Reusable Workflow](https://docs.github.com/en/actions/learn-github-actions/reusing-workflows#using-outputs-from-a-reusable-workflow).
   - It uses the cache to run faster.
@@ -15,13 +15,13 @@ tags: ['code-quality', 'dev-ops']
   - Testing: Running test
   - Build: The build completes succesfully
 
-- Deploy to Preview: [deploy-to-preview.yml](../.github/workflows/deploy-to-preview.yml)
+- Deploy to Preview: [deploy-to-preview.yml](../../.github/workflows/deploy-to-preview.yml)
 
   - It runs on pull request
-  - It depends on [checks.yml](../.github/workflows/checks.yml)
+  - It depends on [checks.yml](../../.github/workflows/checks.yml)
   - Deploy the branch to a preview instance.
 
-- Deploy to Production: [deploy-to-production.yml](../.github/workflows/deploy-to-production.yml)
+- Deploy to Production: [deploy-to-production.yml](../../.github/workflows/deploy-to-production.yml)
   - It runs on push, only on main
-  - It depends on [checks.yml](../.github/workflows/checks.yml)
+  - It depends on [checks.yml](../../.github/workflows/checks.yml)
   - Deploy the main branch to production.

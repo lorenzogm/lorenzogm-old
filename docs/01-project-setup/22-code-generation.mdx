@@ -1,0 +1,12 @@
+---
+title: Code Generation
+date: 'January 16, 2022'
+description: Generate code from the APIs
+tags: ['tools', 'code-generation', 'typescript', 'graphql']
+---
+
+Reading the GraphQL schema defined by the BFF we are able to generate types for TypeScript, GraphQL operations and React Hooks and they can be found at `./src/generated/graphql.ts`
+
+They are generated with the script:
+
+    npm run generate

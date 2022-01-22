@@ -1,0 +1,29 @@
+---
+title: Pull Request
+date: 'January 22, 2022'
+description: How to write pull requests
+tags: ['setup', 'git']
+---
+
+The pull requests will be merged into the main branch via `squash and merge`, providing a linear and clean history of commits for the repository. This is as well connected to the automatic [versioning](./14-versioning.md).
+
+> **Therefore, it's very important to have the right title in the Pull Request**
+
+The title must follow the Conventional Commits described in the [committing](./12-committing.md) section, with two additions:
+
+- The ticket number before the title
+- The Pull Request number
+
+So, the final format should be like this one:
+
+    type(scope): [LGM-123456] title of the ticket (#XY)
+
+Which is compose with the following elements:
+
+- Type: "feat", "fix" are the most common, the full list is in the [committing](./12-committing.md) section.
+- Scope: described in the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- Ticket number: [LGM-XXXXXX]
+- Title of the ticket
+- (#YY) Reference to the PR in GitHub (It will be added automatically before finishing the squash merge).
+
+To get some help in this process, this repository includes a [Pull Request Linter](../../.github/workflows/pull-request-linter.yml). This GitHub workflow adds an additional check to verify the Pull Request title.

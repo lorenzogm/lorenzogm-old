@@ -28,7 +28,7 @@ export function HomeTemplate({ docs }: HomePageProps) {
           {docCategory.entries.map((doc) => (
             <ul key={doc.slug}>
               <li>
-                <Link href={`https://github.com/lorenzogm/lorenzogm/blob/main/${doc.filePath}.mdx`}>{doc.title}</Link>:{' '}
+                <Link href={`https://github.com/lorenzogm/lorenzogm/blob/main/${doc.filePath}`}>{doc.title}</Link>:{' '}
                 {doc.description}
               </li>
             </ul>

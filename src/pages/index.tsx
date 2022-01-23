@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 
+import { getAllDocs } from '~/api'
 import { HomePage } from '~/components'
-import { getAllDocs } from '~/utils/server'
 
 // eslint-disable-next-line func-style
 export const getStaticProps: GetStaticProps = () => {

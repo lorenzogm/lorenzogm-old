@@ -5,7 +5,7 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import { DefaultLayout, theme } from '~/components'
-import { createEmotionCache } from '~/utils/client'
+import { createEmotionCache } from '~/utils'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()

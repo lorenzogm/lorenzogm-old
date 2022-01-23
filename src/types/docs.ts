@@ -4,8 +4,8 @@ export type Docs = {
   articles: DocsCategory
 }
 
-type DocsCategory = {
-  name: 'project-setup' | 'coding-practices' | 'articles'
+export type DocsCategory = {
+  name: string
   entries: Array<DocEntry>
 }
 

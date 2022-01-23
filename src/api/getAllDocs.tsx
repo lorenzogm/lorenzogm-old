@@ -4,7 +4,7 @@ import path from 'path'
 
 import { Docs } from '~/types'
 
-const FOLDER_PATH = 'docs'
+import { FOLDER_PATH } from './constants'
 
 export function getAllDocs(): Docs {
   const categories = fs.readdirSync(path.join(FOLDER_PATH))

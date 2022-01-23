@@ -8,8 +8,14 @@ const Hero = styled.div(
 `,
 )
 
-const styles = {
+const Categories = styled.div(
+  `
+  display: flex;
+  justify-content: space-between;
+  `,
+)
+
+export const Styled = {
+  Categories,
   Hero,
 }
-
-export default styles

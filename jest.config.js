@@ -94,10 +94,7 @@ module.exports = {
     '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$': `<rootDir>/__mocks__/fileMock.js`,
 
     // Handle module aliases
-    '^~/hooks$': '<rootDir>/hooks/index.ts',
-    '^~/services/(.*)$': '<rootDir>/services/$1',
-    '^~/components$': '<rootDir>/src/components/index.ts',
-    '^~/utils$': '<rootDir>/utils/index.ts',
+    '~/(.*)$': '<rootDir>/src/$1',
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader

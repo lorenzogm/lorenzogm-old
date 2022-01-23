@@ -1,18 +1,17 @@
 import { ReactNode } from 'react'
 
-import { Header } from '~/components'
-import { Docs } from '~/types'
+import { Header, HeaderProps } from '~/components'
 
 type DefaultLayoutProps = {
   children: ReactNode
-  docs: Docs
+  header: HeaderProps
 }
 
-export function DefaultLayout({ children, docs }: DefaultLayoutProps) {
+export function DefaultLayout({ children, header }: DefaultLayoutProps) {
   return (
-    <div className="h-screen text-white bg-gray-900">
+    <div className="h-screen text-white bg-gray-800">
       <div className="container mx-auto">
-        <Header docs={docs} />
+        <Header navigation={header.navigation} githubLink={header.githubLink} />
         <main>{children}</main>
       </div>
     </div>

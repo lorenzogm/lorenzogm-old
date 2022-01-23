@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 
-import { getAllDocs, getAllDocsCategories } from '~/api'
+import { getAllDocs, getAllDocsCategories, getHeaderData } from '~/api'
 import { CategoryPage } from '~/components'
 
 // eslint-disable-next-line func-style
@@ -14,34 +14,33 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 // eslint-disable-next-line func-style
 export const getStaticProps: GetStaticProps = ({ params }) => {
-  const docs = getAllDocs()
+  const header = getHeaderData()
 
   if (!params || !params.category) {
     return {
-      props: { docs },
+      props: { header },
       notFound: true,
     }
   }
 
   if (Array.isArray(params.category)) {
     return {
-      props: { docs },
+      props: { header },
       notFound: true,
     }
   }
 
+  const docs = getAllDocs()
   const docsCategory = docs[params.category]
-  console.log({ docs, docsCategory })
 
   if (!docsCategory) {
-    console.log('asdf')
     return {
-      props: { docs },
+      props: { docs, header },
       notFound: true,
     }
   }
 
-  return { props: { docs, docsCategory } }
+  return { props: { docsCategory, header } }
 }
 
 export default CategoryPage

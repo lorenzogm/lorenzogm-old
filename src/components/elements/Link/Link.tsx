@@ -9,7 +9,7 @@ export type LinkProps = LinkNextProps & {
 export function Link({ children, href }: LinkProps): ReactElement {
   return (
     <LinkNext href={href}>
-      <a className="underline font-bold">{children}</a>
+      <a className="text-base font-medium text-gray-400 hover:text-gray-200 hover:underline">{children}</a>
     </LinkNext>
   )
 }

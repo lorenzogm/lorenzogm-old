@@ -14,7 +14,7 @@ export default function MyApp(props: AppProps) {
         <title>Lorenzo GM</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <DefaultLayout docs={pageProps.docs || []}>
+      <DefaultLayout header={pageProps.header}>
         <Component {...pageProps} />
       </DefaultLayout>
     </>

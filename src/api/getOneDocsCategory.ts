@@ -4,7 +4,7 @@ import path from 'path'
 
 import { DocsCategory } from '~/types'
 
-import { FOLDER_PATH } from './constants'
+import { FOLDER_PATH } from './data'
 
 type GetOneCategoryProps = {
   categoryName: DocsCategory['name']

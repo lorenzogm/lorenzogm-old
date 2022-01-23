@@ -1,29 +1,21 @@
 import { Link } from '~/components'
-import { Docs } from '~/types'
 
-type HomePageProps = {
-  docs: Docs
-}
-
-export function HomeTemplate({ docs }: HomePageProps) {
+export function HomeTemplate() {
   return (
-    <>
-      <div className="flex justify-between my-8">
-        <div>
-          <h1>{`Hi! I'm Lorenzo`}</h1>
-          <h2>I make stuff with code</h2>
+    <div className="flex relative z-20 items-center">
+      <div className="container mx-auto px-6 flex flex-col justify-between items-center relative py-4">
+        <div className="flex flex-col">
+          <p className="text-3xl my-6 text-center dark:text-white">Hi, I&#x27;m Lorenzo</p>
+          <h2 className="max-w-3xl text-5xl md:text-6xl font-bold mx-auto dark:text-white text-gray-800 text-center py-2">
+            I do stuff with code
+          </h2>
+          <div className="flex items-center justify-center mt-4">
+            <Link href="/blog" component="button">
+              Read the blog
+            </Link>
+          </div>
         </div>
-        <p>I need to add a picture here</p>
       </div>
-      <hr />
-      <div className="flex justify-between">
-        {Object.values(docs).map((docsCategory) => (
-          <Link key={docsCategory.name} href={`/${docsCategory.name}`} passHref>
-            <h3>{docsCategory.name}</h3>
-            {/* <p>{docsCategory.description}</p> */}
-          </Link>
-        ))}
-      </div>
-    </>
+    </div>
   )
 }

@@ -1,2 +1,2 @@
-export * from './cx'
+export * from './clsx'
 export * from './startCase'

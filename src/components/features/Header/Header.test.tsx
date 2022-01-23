@@ -17,5 +17,5 @@ test('Header', () => {
   expect(screen.getByRole('link', { name: 'GitHub' })).toBeInTheDocument()
 
   // small viewports
-  expect(screen.getByRole('button', { name: 'Open main menu' })).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: 'Toggle mobile navigation' })).toBeInTheDocument()
 })

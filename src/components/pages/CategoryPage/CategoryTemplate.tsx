@@ -1,4 +1,4 @@
-import { Heading, Link } from '~/components'
+import { Link } from '~/components'
 import { DocsCategory } from '~/types'
 
 type CategoryPageProps = {
@@ -8,7 +8,7 @@ type CategoryPageProps = {
 export function CategoryTemplate({ docsCategory }: CategoryPageProps) {
   return (
     <>
-      <Heading variant="h1">{docsCategory.name}</Heading>
+      <h1>{docsCategory.name}</h1>
       <hr />
       {docsCategory.entries.map((doc) => (
         <ul key={doc.slug}>

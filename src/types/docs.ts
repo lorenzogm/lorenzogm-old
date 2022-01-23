@@ -1,7 +1,5 @@
 export type Docs = {
-  'project-setup': DocsCategory
-  'coding-practices': DocsCategory
-  articles: DocsCategory
+  [key: string]: DocsCategory
 }
 
 export type DocsCategory = {

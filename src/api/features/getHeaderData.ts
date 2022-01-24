@@ -9,11 +9,13 @@ import { FOLDER_PATH, GITHUB_LINK } from '../data'
 export function getHeaderData(): HeaderProps {
   const categories = fs.readdirSync(path.join(FOLDER_PATH))
 
-  const navigation = categories.map((category) => ({
-    href: category,
-    name: startCase(category.replace('-', ' ')),
-    current: false,
-  }))
+  const navigation = categories
+    .filter((category) => category !== 'project-setup')
+    .map((category) => ({
+      href: category,
+      name: startCase(category.replace('-', ' ')),
+      current: false,
+    }))
 
   return {
     navigation,

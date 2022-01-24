@@ -15,14 +15,14 @@ export function Header({ navigation, githubLink }: HeaderProps) {
 
   return (
     <header className="h-24 sm:h-32 flex items-center z-30 w-full">
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="uppercase text-gray-800 dark:text-white font-black text-3xl flex items-center">
+      <div className="flex items-center justify-between">
+        <Link href="/" className="uppercase text-white font-black text-3xl flex items-center">
           lorenzogm.com
         </Link>
         <div className="flex items-center">
           <nav
             className={clsx(
-              'font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center',
+              'font-sen text-gray-800 text-white uppercase text-lg lg:flex items-center',
               isMobileNavigationOpen === 'OPEN'
                 ? 'absolute inset-x-0 top-20 bottom-10 bg-gray-800 h-100vh z-30'
                 : 'hidden',

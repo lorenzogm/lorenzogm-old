@@ -9,7 +9,7 @@ import { DefaultLayout } from '~/components'
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
   return (
-    <div className="dark:bg-gray-800 font-mono bg-white h-screen text-white">
+    <div className="font-mono text-white">
       <Head>
         <title>Lorenzo GM</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />

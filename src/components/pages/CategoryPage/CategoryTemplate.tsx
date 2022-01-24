@@ -10,7 +10,7 @@ export function CategoryTemplate({ docsCategory }: CategoryPageProps) {
     <>
       <h1>{docsCategory.name}</h1>
       <hr />
-      <div className="grid grid-cols-4 gap-4 place-items-start">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 place-items-start">
         {docsCategory.entries.map((doc) => (
           <Card
             key={doc.slug}

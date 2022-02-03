@@ -1,6 +1,6 @@
 ---
 title: GitHub Actions
-date: 'January 10, 2022'
+date: 'February 03, 2022'
 description: Useful GitHub Actions
 imageURL: '/javascript-functions-thumbnail.jpeg'
 tags: ['code-quality', 'dev-ops']
@@ -15,13 +15,18 @@ tags: ['code-quality', 'dev-ops']
   - Testing: Running test
   - Build: The build completes succesfully
 
-- Deploy to Preview: [deploy-to-preview.yml](../../.github/workflows/deploy-to-preview.yml)
+- Pull Request Linter: [pull-request-linter.yml](../../.github/workflows/pull-request-linter.yml)
+
+  - It runs on pull request
+  - The Pull Request title is checked to match
+
+- Pull Request: [deploy-to-preview.yml](../../.github/workflows/pull-request.yml)
 
   - It runs on pull request
   - It depends on [checks.yml](../../.github/workflows/checks.yml)
   - Deploy the branch to a preview instance.
 
-- Deploy to Production: [deploy-to-production.yml](../../.github/workflows/deploy-to-production.yml)
+- Push to Main: [deploy-to-production.yml](../../.github/workflows/push-to-main.yml)
   - It runs on push, only on main
   - It depends on [checks.yml](../../.github/workflows/checks.yml)
   - Deploy the main branch to production.

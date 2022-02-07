@@ -1,0 +1,65 @@
+---
+title: Testing Automation in the Front-End
+date: 'February 07, 2022'
+description: Strategy to write automated tests
+tags: ['testing']
+---
+
+To define the unit testing strategy it's required to analyse 3 different points:
+
+- The types of testing available
+- How to write maintainable tests
+- Front-end structure of the software
+- Tools to write automated tests
+
+Let's analyse them independently.
+
+## Types of testings
+
+A lot more details about the types of testing can be found in this article about [Front-End Test Automation](https://medium.com/valtech-ch/frontend-test-automation-639bc2ad79ef). A quick summary is that we have available those 3 types of testing:
+
+- Unit tests, testing a single unit of code without dependencies
+- Integration tests, testing multiple units of code
+- End-to-end tests, when the full software is tested as the end user
+
+Based on the conclusions from the article above, the focus should be on the integration tests.
+
+## How to write maintainable tests
+
+The main focus when writing maintainable tests is to write the tests as the final user would see the software. This way, what really matters is that the output in the screen is exactly what the user should see, and how it should behave.
+
+While the business requirements are the same, the tests are still valid. And this approach would allow us to completly modify the implementation without the need to create, update or delete automated tests.
+
+This approach is totally aligned with our conclusion above about the need of implement integration tests.
+
+## Software structure
+
+Following the project structure described in [Project Structure](./project-structure.mdx), those are the components available in the UI:
+
+- Foundation
+- Elements
+- Modules
+- Features
+- Pages
+- Layouts
+
+And keeping in mind the conclusions from the previous two sections, the focus in the project structure would be mainly in the Pages and the Layouts. However, for projects where a CMS is used, it's also important to tests the features, as testing a specific page doesn't mean that all the features has been tested.
+
+At this point, we have analysed how to test the UI, which could include some client side requests. However, the server side requests are not include, like the requests fired (for projects with Next.js) on "getStaticProps" or "getServerSideProps".
+
+## Tools
+
+- Jest, the testing frameworks
+- Testing Library, a library which help us to tests the behaviour of our software, not the implementation details
+- MWS (Mock Service Worker), a library which uses service workers to mock the API requests
+
+## Conclusions
+
+To summary, those are the components to tests:
+
+- Features
+- Pages
+- Layouts
+- Server-side requests
+
+Testing these components should provide a very high percentage of test coverage and enough confience on our automated tests as we are testing multiple units together.
